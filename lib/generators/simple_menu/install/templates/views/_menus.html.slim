@@ -1,0 +1,4 @@
+- menu = Menu.find_by(position: position)
+- if menu.present? and menu.menu_items.present?
+  ul
+    = render partial: "/simple_menu/sub_menu", locals: { childs: menu.menu_items.level_ove }

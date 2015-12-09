@@ -1,0 +1,7 @@
+- childs.each do |menu_item|
+  li
+    = get_link(menu_item)
+    - childs = menu_item.children
+    - if childs.present?
+      ul
+        = render partial: "/simple_menu/sub_menu", locals: { childs: childs }
