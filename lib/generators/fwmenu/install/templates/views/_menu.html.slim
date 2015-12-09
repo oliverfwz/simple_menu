@@ -1,0 +1,4 @@
+- <%= file_name %>s = assigns["items"] 
+- if <%= file_name %>s.present? 
+  - <%= file_name %>s.each do |<%= file_name %>|  
+    = render partial: '/get_sub<%= file_name %>_for', locals: { <%= file_name %>_items: <%= file_name %>.<%= file_name %>_items, level: 1 }
