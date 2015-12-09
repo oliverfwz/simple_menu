@@ -34,13 +34,6 @@ module SimpleMenu
         copy_file "views/_menus.html.slim", "app/views/simple_menu/_menus.html.slim"
         copy_file "views/_sub_menu.html.slim", "app/views/simple_menu/_sub_menu.html.slim"
       end
-
-      def setup_routes
-        if ENV["RAILS_ENV"] != "test"
-          route "resources :articles, only: [:show]"
-          route "resources :categories, only: [:show]"
-        end
-      end
     end
   end
 end
