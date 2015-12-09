@@ -1,5 +1,5 @@
 class CreateMenus < ActiveRecord::Migration
-  def self.up
+  def up
     create_table :menus do |t|
       t.string    "title"
       t.text      "description"
@@ -9,7 +9,7 @@ class CreateMenus < ActiveRecord::Migration
     end
   end
 
-  def self.down
+  def down
     drop_table :menus
   end
 end
