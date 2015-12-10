@@ -1,3 +1,4 @@
+
 require "generator_spec"
 require_relative "../../../../../lib/generators/fwmenu/rspec/rspec_generator.rb"
 
