@@ -62,12 +62,6 @@ RSpec.describe MenuItem, type: :model do
     end
   end
 
-  context 'Render menu' do
-    it 'update a place after create menu item' do
-      expect(Place.first.description).to include("Update Menu Item 1")
-    end
-  end
-
   context '#update_sort_tree' do
     it 'update column sort_tree to sort' do
       expect(menu_item.sort_tree).to eq(
