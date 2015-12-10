@@ -1,8 +1,4 @@
 module MenuHelper
-  def get_menus_for
-    Menu.includes(:menu_items).where(published: true).where("length(menus.position) > 0")
-  end
-
   def get_link(item)
     if item.internal_link && item.page.present?
       if item.page.to_s == "/articles/:id" && item.article.present?
