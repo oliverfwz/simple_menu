@@ -1,28 +1,33 @@
 # SimpleMenu
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/simple_menu`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem create based on fwmenu of brianfwz https://github.com/brianfwz/fwmenu
+Remove article and category
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'simple_menu'
+gem 'simple_menu', :git => 'https://github.com/oliverfwz/simple_menu.git'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+    $ rails g simple_menu:install
 
-    $ gem install simple_menu
+    $ rails g simple_menu:admin
+
+    $ rake db:migrate
 
 ## Usage
 
-TODO: Write usage instructions here
+Login admin to create positions, menus, menuitems
+
+Add this line to your layout you want render menu with position you create in admin.
+
+		= render partial: "simple_menu/menus", locals: { position: "pos_menu_head" }
 
 ## Development
 
@@ -32,7 +37,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/simple_menu/fork )
+1. Fork it ( https://github.com/oliverfwz/simple_menu/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
