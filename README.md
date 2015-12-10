@@ -1,6 +1,7 @@
 # SimpleMenu
 
 This gem create based on fwmenu of brianfwz https://github.com/brianfwz/fwmenu
+
 Remove article and category
 
 ## Installation
